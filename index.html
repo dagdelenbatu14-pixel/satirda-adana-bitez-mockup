@@ -231,8 +231,15 @@
             display: flex;
             width: max-content;
             gap: 40px;
-            animation: scroll-left 25s linear infinite;
+            animation-name: scroll-left;
+            animation-duration: 25s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
             padding: 0 20px;
+            will-change: transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
         }
 
         .celebrity-slider-track.reverse {
@@ -352,7 +359,7 @@
 </header>
 <main class="pt-0">
 <!-- Hero Section with Image Background -->
-<section class="relative h-[95vh] min-h-[750px] flex items-center overflow-hidden">
+<section class="relative min-h-[100svh] flex items-center overflow-hidden py-28 md:py-24">
 <div class="absolute inset-0 z-0">
 <img alt="Satırda Adana Kebap Hazırlığı" class="w-full h-full object-cover" src="images/hero-real.jpg"/>
 <div class="absolute inset-0 hero-overlay"></div>
