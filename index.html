@@ -238,7 +238,6 @@
             animation-play-state: running;
             padding: 0 20px;
             will-change: transform;
-            transform: translateZ(0);
             backface-visibility: hidden;
         }
 
@@ -252,13 +251,13 @@
         }
 
         @keyframes scroll-left {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-50% - 20px)); }
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
         }
 
         @keyframes scroll-right {
-            0% { transform: translateX(calc(-50% - 20px)); }
-            100% { transform: translateX(0); }
+            0% { transform: translate3d(-50%, 0, 0); }
+            100% { transform: translate3d(0, 0, 0); }
         }
 
         .celebrity-card {
